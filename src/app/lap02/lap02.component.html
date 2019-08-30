@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <th>Hình</th>
+        <th>Họ và Tên</th>
+        <th>Ngày sinh</th>
+        <th>Giới tính</th>
+        <th>Điểm</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of student">
+            <td> <img src="{{student.photo}}" style="width:100px;height: 100px;"> </td>
+            <td>{{student.fullName}}</td>
+            <td>{{student.birthday}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.mark}}</td>
+        </tr>
+    </tbody>
+</table>

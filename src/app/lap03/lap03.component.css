@@ -1,0 +1,20 @@
+nav{
+    background-color: rgb(238, 237, 237);
+    
+}
+.nav >a{
+    color: gray;
+}
+table{
+    border: 2px solid #000000;
+}
+table th, table td{
+    border: 2px solid #000000;
+}
+button{
+    width: 30px auto;
+    height: 30px auto;
+}
+.total{
+    text-align: end !important;
+}
