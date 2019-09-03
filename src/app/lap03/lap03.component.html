@@ -1,16 +1,17 @@
 <div class="container">
-    <nav class="bg">
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    <nav class="bg row">
+        <div class="nav nav-tabs" role="tablist">
+            <a class="nav-item nav-link active " data-toggle="tab" routerLink="/lap02" role="tab"
                 aria-controls="nav-home" aria-selected="true">Muatc</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" routerLink="/lap03" role="tab"
                 aria-controls="nav-profile" aria-selected="false">Home</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" routerLink="/products" role="tab"
                 aria-controls="nav-contact" aria-selected="false">Cart</a>
         </div>
     </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <div class="tab-content">
+        <div class="tab-pane fade show active table-responsive" id="nav-home" role="tabpanel"
+            aria-labelledby="nav-home-tab">
             <h2 class="mt-3">Your Card</h2>
             <table class="table table-bordered">
                 <thead>

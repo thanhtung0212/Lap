@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
         "description": "Leaf rake with 48-inch wooden handle.",
         "price": 19.95,
         "starRating": 3.2,
-        "imageUrl": "1.jpg"
+        "imageUrl": "assets/images/1.jpg"
       },
       {
         "productId": 2,
@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
         "description": "15 gallon capacity rolling garden cart",
         "price": 32.99,
         "starRating": 4.2,
-        "imageUrl": "2.jpeg"
+        "imageUrl": "assets/images/2.jpeg"
       },
       {
         "productId": 5,
@@ -41,7 +41,7 @@ export class ProductsComponent implements OnInit {
         "description": "Curved claw steel hammer",
         "price": 8.9,
         "starRating": 4.8,
-        "imageUrl": "1.jpg"
+        "imageUrl": "assets/images/1.jpg"
       },
       {
         "productId": 8,
@@ -51,7 +51,7 @@ export class ProductsComponent implements OnInit {
         "description": "15-inch steel blade hand saw",
         "price": 11.55,
         "starRating": 3.7,
-        "imageUrl": "2.jpeg"
+        "imageUrl": "assets/images/2.jpeg"
       },
       {
         "productId": 10,
@@ -61,13 +61,32 @@ export class ProductsComponent implements OnInit {
         "description": "Standard two-button video game controller",
         "price": 35.95,
         "starRating": 4.6,
-        "imageUrl": "1.jpg"
+        "imageUrl": "assets/images/1.jpg"
       },
-    ]
+    ];
+  detail = {
+    code: '',
+    name: '',
+    date: '',
+    description: '',
+    price: '',
+    star: '',
+    img: '',
+  }
   toggleEdit() {
     this.isEdit = !this.isEdit;
   }
   constructor() { }
+
+  showModal(name, code, date, price, description, star, img) {
+    this.detail.code = code
+    this.detail.name = name
+    this.detail.date = date
+    this.detail.price = price
+    this.detail.description = description
+    this.detail.star = star
+    this.detail.img = img
+  }
 
   ngOnInit() {
   }

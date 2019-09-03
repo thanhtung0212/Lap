@@ -12,8 +12,9 @@ table th, table td{
     border: 2px solid #000000;
 }
 button{
-    width: 30px auto;
-    height: 30px auto;
+    width: 26px auto;
+    height: 26px auto;
+    margin: 4px;
 }
 .total{
     text-align: end !important;
