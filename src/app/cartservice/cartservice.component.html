@@ -1,0 +1,41 @@
+<p>cartservice works!</p>
+<div class="table-responsive">
+    <table class="table" id="SearchTextResult">
+        <thead>
+            <tr class="table-boderless">
+                <th scope="col">
+                    <button class="btn btn-primary" (click)="toggleEdit()">
+                        {{isEdit ? 'Hide Image' : 'Show Image'}}</button>
+                </th>
+                <th scope="col">Product</th>
+                <th scope="col">Code</th>
+                <th scope="col">Available</th>
+                <th scope="col">Price</th>
+                <th scope="col">5 Star Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let products of listproducts | filter:temp' data-target="#exampleModalCenter,#fsModal"
+                data-toggle="modal">
+                <td>
+                    <img *ngIf="isEdit" src="{{products.imageUrl}}" width="100px">
+                </td>
+                <td>
+                    <a [title]="products.productName + 'detail'" [routerLink]="['/products', products.productId]">
+                        {{products.productName}}
+                    </a>
+                </td>
+                <td>{{products.productCode}}</td>
+                <td>{{products.releaseDate}}</td>
+                <td>{{products.price}}</td>
+                <td>
+                    <div class="justify-center">
+                        <star-rating [value]="products.starRating" checkedcolor="black" uncheckedcolor="white"
+                            size="30px"></star-rating>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#"> Mua hang</a>
+</div>
