@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card">
+        <div class=" card-header bg-dark" style="color: aliceblue">
+            DANH SÁCH HÀNG HÓA
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" (click)="orderbyName('name')">Sản phẩm</th>
+                    <th scope="col" (click)="orderbyName('price')">Đơn giá</th>
+                    <th scope="col">Giảm giá</th>
+                    <th scope="col">Ngày</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let item of list |  paginate: {itemsPerPage: itempage , currentPage: currpage} |orderBy: orderName ">
+                    <th scope="row">{{item.name}}</th>
+                    <td>{{item.price}}</td>
+                    <td>{{item.discount}}</td>
+                    <td>{{item.date}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button type="button" class="btn btn-dark" (click)="first()">First</button>
+        <button type="button" class="btn btn-dark" (click)="next()">Next</button>
+        <button type="button" class="btn btn-dark" (click)="back()">Lui</button>
+        <button type="button" class="btn btn-dark" (click)="end()">cuoi trang</button>
+    </div>
+    <span>TotalPages : {{totalpage}} </span>
+</div>
