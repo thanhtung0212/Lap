@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card ">
+        <div class="card-header text-center">
+            <h3>XẾP LOẠI HỌC LỰC</h3>
+        </div>
+        <form>
+            <div class="form-group">
+                <label>Ho va Ten</label>
+                <input type="text" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Ngay sinh</label>
+                <input type="number" [(ngModel)]="student.date" [ngModelOptions]="{standalone: true}"
+                    class="form-control">
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Gioi tinh</option>
+                <option value="1">NAm </option>
+                <option value="2">Nu </option>
+            </select>
+            <div class="form-group">
+                <label>Diem</label>
+                <input type="number" [(ngModel)]="student.grade" class="form-control"
+                    [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="alert alert-primary" role="alert" style="height: 50px">
+                {{student.result}}
+            </div>
+            <button type="submit" class="btn btn-primary" (click)='grade()' class="form-control">Tinh</button>
+        </form>
+    </div>
+
+</div>
